@@ -6,7 +6,7 @@ function Questions() {
     const [questions, setQuestions] = useState([])
 
     useEffect(() => {
-        fetch('https://dnd-question-sheet-tracker.herokuapp.com/questions')
+        fetch('https://dnd-character-sheet-tracker.herokuapp.com/questions')
             .then(res => res.json())
             .then(
                 (result) => {
