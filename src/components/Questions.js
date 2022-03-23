@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ListView from './TableView'
 
 function Questions() {
     const [error, setError] = useState(null);
@@ -27,11 +28,7 @@ function Questions() {
     } else {
         return (
             <ul>
-                {questions.map(question => (
-                    <li key={question.name}>
-                        {question.name}
-                    </li>
-                ))}
+                <ListView viewItem={questions} />
             </ul>
         )
     }
